@@ -22,8 +22,8 @@
             </intent-filter>
         </activity>
 
-        <!-- Diğer aktiviteler -->
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".RegisterActivity"
+            android:exported="true" />
 
     </application>
 </manifest>

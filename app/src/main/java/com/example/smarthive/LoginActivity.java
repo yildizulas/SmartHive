@@ -1,3 +1,5 @@
+// LoginActivity.java
+
 package com.example.smarthive;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -41,6 +43,12 @@ public class LoginActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(LoginActivity.this, "Please fill out all fields.", Toast.LENGTH_SHORT).show();
             }
+        });
+
+        Button registerRedirectButton = findViewById(R.id.registerRedirectButton);
+        registerRedirectButton.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
         });
     }
 }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- Updated XML Layout for RegisterActivity -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- E-posta Alanı -->
+    <!-- Email Field -->
     <EditText
         android:id="@+id/emailField"
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
         android:hint="Email"
         android:inputType="textEmailAddress" />
 
-    <!-- Şifre Alanı -->
+    <!-- Password Field -->
     <EditText
         android:id="@+id/passwordField"
         android:layout_width="match_parent"
@@ -22,10 +22,20 @@
         android:hint="Password"
         android:inputType="textPassword" />
 
-    <!-- Kayıt Butonu -->
+    <!-- Confirm Password Field -->
+    <EditText
+        android:id="@+id/confirmPasswordField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:layout_marginTop="8dp" />
+
+    <!-- Create an Account Button -->
     <Button
         android:id="@+id/registerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register" />
+        android:text="Create an Account" />
+
 </LinearLayout>
