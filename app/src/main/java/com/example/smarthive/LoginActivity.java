@@ -1,12 +1,15 @@
 // LoginActivity.java
 
 package com.example.smarthive;
-import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
@@ -35,7 +38,12 @@ public class LoginActivity extends AppCompatActivity {
                         .addOnCompleteListener(task -> {
                             if (task.isSuccessful()) {
                                 Toast.makeText(LoginActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
-                                // Redirect to main page
+
+                                // Redirect to GroupActivity
+                                Intent intent = new Intent(LoginActivity.this, GroupListActivity.class);
+                                startActivity(intent);
+                                finish();
+
                             } else {
                                 Toast.makeText(LoginActivity.this, "Login Failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }
@@ -48,6 +56,12 @@ public class LoginActivity extends AppCompatActivity {
         Button registerRedirectButton = findViewById(R.id.registerRedirectButton);
         registerRedirectButton.setOnClickListener(v -> {
             Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
+        });
+
+        Button forgotPasswordButton = findViewById(R.id.forgotPasswordButton);
+        forgotPasswordButton.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
             startActivity(intent);
         });
     }

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.smarthive">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +17,6 @@
         android:theme="@style/Theme.SmartHive"
         tools:targetApi="31">
 
-        <!-- LoginActivity'nin başlangıç aktivitesi olarak tanımlanması -->
         <activity android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
@@ -23,6 +26,21 @@
         </activity>
 
         <activity android:name=".RegisterActivity"
+            android:exported="true" />
+
+        <activity android:name=".ForgotPasswordActivity"
+            android:exported="true" />
+
+        <activity android:name=".CreateGroupActivity"
+            android:exported="true" />
+
+        <activity android:name=".CreateListActivity"
+            android:exported="true" />
+
+        <activity android:name=".GroupListActivity"
+            android:exported="true" />
+
+        <activity android:name=".GroupDetailActivity"
             android:exported="true" />
 
     </application>
